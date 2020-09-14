@@ -41,7 +41,7 @@ This dataset contains type scoring from Brahma Chicken.
 
 All animals were weight at each scoring, the weight is expressed in grams.
 
-A link to the weight distribution can be found [here](R/MyFirstVisual.md)
+A link to the weight distribution can be found here in [R](R/MyFirstVisual.md) or [python](Python/MyFirstVisual.ipynb)
 
 ## Scoring
 
