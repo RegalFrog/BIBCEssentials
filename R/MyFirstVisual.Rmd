@@ -69,7 +69,7 @@ ScoringData <-
 
 # Visualization
 
-## Weight histogram
+## Weight boxplot
 
 ```{r}
 library(ggplot2)
@@ -80,7 +80,7 @@ p <- ggplot(ScoringData, aes(x=Sex, y=Weight)) +
 p + coord_flip()
 ```
 
-## Weight histogram
+## Weight and scoring scatterplot
 
 ```{r}
 # Basic box plot

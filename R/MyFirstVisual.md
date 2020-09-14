@@ -6,8 +6,9 @@ R Notebook for scorings
       - [Packages loaded](#packages-loaded)
       - [Data loading](#data-loading)
   - [Visualization](#visualization)
-      - [Weight histogram](#weight-histogram)
-      - [Weight histogram](#weight-histogram-1)
+      - [Weight boxplot](#weight-boxplot)
+      - [Weight and scoring
+        scatterplot](#weight-and-scoring-scatterplot)
 
 This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you
 execute code within the notebook, the results appear beneath the code.
@@ -93,7 +94,7 @@ ScoringData <-
 
 # Visualization
 
-## Weight histogram
+## Weight boxplot
 
 ``` r
 library(ggplot2)
@@ -106,7 +107,7 @@ p + coord_flip()
 
 ![](MyFirstVisual_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
-## Weight histogram
+## Weight and scoring scatterplot
 
 ``` r
 # Basic box plot
