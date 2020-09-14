@@ -45,7 +45,8 @@ All animals were weight at each scoring, the weight is expressed in
 grams.
 
 A link to the weight distribution can be found here in
-[R](R/MyFirstVisual.md) or [python](Python/MyFirstVisual.ipynb)
+[R](R/MyFirstVisual.md), [python](Python/MyFirstVisual.ipynb) and
+[tableau](https://public.tableau.com/profile/bovianalytics#!/vizhome/BrahmaScorings/Scatterplot)
 
 ## Scoring
 
