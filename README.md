@@ -7,6 +7,7 @@ Notebook for Brahma Scoring
   - [Scorings (or features)](#scorings-or-features)
       - [Weights](#weights)
       - [Scoring](#scoring)
+  - [Clustering methods](#clustering-methods)
 
 This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you
 execute code within the notebook, the results appear beneath the code.
@@ -62,3 +63,9 @@ The feet need to have equal length in toes and yellow
 
 The animals need to have a typical brahma type as shown in the pictures
 above.
+
+# Clustering methods
+
+A link to the k-means clustering can be found here in R [for 2
+variables](R/KMeans2Variables.md) and [for k
+variables](R/KMeansKVariables.md),

@@ -1,0 +1,130 @@
+---
+title: "R Notebook for k-means scorings"
+output: 
+  github_document:
+    toc: true
+    toc_depth: 3
+editor_options: 
+  chunk_output_type: inline
+---
+
+# Data extraction, transformation and loading
+
+## Packages loaded
+
+```{r warning=FALSE}
+r = getOption("repos")
+r["CRAN"] = "http://cran.us.r-project.org"
+options(repos = r)
+
+#data loading
+if (!require("readr")) {
+  install.packages("readr", dependencies = TRUE)
+  library(readr)
+
+}
+citation("readr")
+
+#data manipulation
+if (!require("dplyr")) {
+  install.packages("dplyr", dependencies = TRUE)
+  library(dplyr)
+  
+}
+citation("dplyr")
+
+#data visualisation
+if (!require("ggplot2")) {
+  install.packages("ggplot2", dependencies = TRUE)
+  library(ggplot2)
+ 
+}
+citation("ggplot2")
+
+#drop_na
+if (!require("tidyr")) {
+  install.packages("tidyr", dependencies = TRUE)
+  library(tidyr)
+  
+}
+citation("tidyr")
+
+#map_dbl
+if (!require("purrr")) {
+  install.packages("purrr", dependencies = TRUE)
+  library(purrr)
+ 
+}
+citation("purrr")
+
+#visuals for kmeans
+if (!require("factoextra")) {
+  install.packages("factoextra", dependencies = TRUE)
+  library(factoextra)
+  
+}
+citation("factoextra")
+```
+
+## Data loading
+
+```{r}
+typeVars <- c("Feet", "Head", "Type","FeatherColor")
+ScoringData <- 
+  read_delim(
+    "../Data/Scorings.csv",
+    delim = ";",
+    col_types = cols(
+      Date = col_character(),
+      Sex = col_character(),
+      AnimalIdentifier = col_character(),
+      Weight = col_integer(), 
+      Color = col_character(), 
+      Feet = col_integer(), 
+      Head = col_integer(),
+      Type = col_integer(), 
+      FeatherColor = col_integer()
+      )) %>%
+  dplyr::mutate(
+    AverageScore = rowMeans(select(., typeVars))
+    ) %>% drop_na() %>%
+  dplyr::select(
+    Weight,
+    Feet, 
+    Head,
+    Type,
+    FeatherColor
+  )
+```
+
+# K means
+
+## Number of optimal clusters using Elbow
+
+```{r}
+set.seed(123)
+
+# function to compute total within-cluster sum of square 
+wss <- function(k) {
+  kmeans(ScoringData, k, nstart = 10 )$tot.withinss
+}
+
+# Compute and plot wss for k = 1 to k = 15
+k.values <- 1:15
+
+# extract wss for 2-15 clusters
+wss_values <- map_dbl(k.values, wss)
+
+plot(k.values, wss_values,
+       type="b", pch = 19, frame = FALSE, 
+       xlab="Number of clusters K",
+       ylab="Total within-clusters sum of squares")
+```
+
+
+## Visuals
+
+```{r}
+kMeans <- kmeans(ScoringData, centers = 3)
+fviz_cluster(kMeans, data = ScoringData)
+```
