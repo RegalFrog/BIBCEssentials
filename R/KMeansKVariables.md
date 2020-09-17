@@ -80,16 +80,17 @@ citation("dplyr")
     ## To cite package 'dplyr' in publications use:
     ## 
     ##   Hadley Wickham, Romain François, Lionel Henry and Kirill Müller
-    ##   (2019). dplyr: A Grammar of Data Manipulation. R package version
-    ##   0.8.3. https://CRAN.R-project.org/package=dplyr
+    ##   (2020). dplyr: A Grammar of Data Manipulation. R package version
+    ##   1.0.2. https://CRAN.R-project.org/package=dplyr
     ## 
     ## A BibTeX entry for LaTeX users is
     ## 
     ##   @Manual{,
     ##     title = {dplyr: A Grammar of Data Manipulation},
-    ##     author = {Hadley Wickham and Romain François and Lionel Henry and Kirill Müller},
-    ##     year = {2019},
-    ##     note = {R package version 0.8.3},
+    ##     author = {Hadley Wickham and Romain François and Lionel {
+    ##              Henry} and Kirill Müller},
+    ##     year = {2020},
+    ##     note = {R package version 1.0.2},
     ##     url = {https://CRAN.R-project.org/package=dplyr},
     ##   }
 
@@ -143,17 +144,16 @@ citation("tidyr")
     ## 
     ## To cite package 'tidyr' in publications use:
     ## 
-    ##   Hadley Wickham and Lionel Henry (2019). tidyr: Easily Tidy Data with
-    ##   'spread()' and 'gather()' Functions. R package version 0.8.3.
-    ##   https://CRAN.R-project.org/package=tidyr
+    ##   Hadley Wickham (2020). tidyr: Tidy Messy Data. R package version
+    ##   1.1.2. https://CRAN.R-project.org/package=tidyr
     ## 
     ## A BibTeX entry for LaTeX users is
     ## 
     ##   @Manual{,
-    ##     title = {tidyr: Easily Tidy Data with 'spread()' and 'gather()' Functions},
-    ##     author = {Hadley Wickham and Lionel Henry},
-    ##     year = {2019},
-    ##     note = {R package version 0.8.3},
+    ##     title = {tidyr: Tidy Messy Data},
+    ##     author = {Hadley Wickham},
+    ##     year = {2020},
+    ##     note = {R package version 1.1.2},
     ##     url = {https://CRAN.R-project.org/package=tidyr},
     ##   }
 
@@ -175,8 +175,8 @@ citation("purrr")
     ## 
     ## To cite package 'purrr' in publications use:
     ## 
-    ##   Lionel Henry and Hadley Wickham (2019). purrr: Functional Programming
-    ##   Tools. R package version 0.3.2.
+    ##   Lionel Henry and Hadley Wickham (2020). purrr: Functional Programming
+    ##   Tools. R package version 0.3.4.
     ##   https://CRAN.R-project.org/package=purrr
     ## 
     ## A BibTeX entry for LaTeX users is
@@ -184,8 +184,8 @@ citation("purrr")
     ##   @Manual{,
     ##     title = {purrr: Functional Programming Tools},
     ##     author = {Lionel Henry and Hadley Wickham},
-    ##     year = {2019},
-    ##     note = {R package version 0.3.2},
+    ##     year = {2020},
+    ##     note = {R package version 0.3.4},
     ##     url = {https://CRAN.R-project.org/package=purrr},
     ##   }
 
@@ -200,7 +200,7 @@ if (!require("factoextra")) {
 
     ## Loading required package: factoextra
 
-    ## Welcome! Related Books: `Practical Guide To Cluster Analysis in R` at https://goo.gl/13EFCZ
+    ## Welcome! Want to learn more? See two factoextra-related books at https://goo.gl/ve3WBa
 
 ``` r
 citation("factoextra")
@@ -209,17 +209,17 @@ citation("factoextra")
     ## 
     ## To cite package 'factoextra' in publications use:
     ## 
-    ##   Alboukadel Kassambara and Fabian Mundt (2017). factoextra: Extract
+    ##   Alboukadel Kassambara and Fabian Mundt (2020). factoextra: Extract
     ##   and Visualize the Results of Multivariate Data Analyses. R package
-    ##   version 1.0.5. https://CRAN.R-project.org/package=factoextra
+    ##   version 1.0.7. https://CRAN.R-project.org/package=factoextra
     ## 
     ## A BibTeX entry for LaTeX users is
     ## 
     ##   @Manual{,
     ##     title = {factoextra: Extract and Visualize the Results of Multivariate Data Analyses},
     ##     author = {Alboukadel Kassambara and Fabian Mundt},
-    ##     year = {2017},
-    ##     note = {R package version 1.0.5},
+    ##     year = {2020},
+    ##     note = {R package version 1.0.7},
     ##     url = {https://CRAN.R-project.org/package=factoextra},
     ##   }
 
@@ -253,6 +253,11 @@ ScoringData <-
     FeatherColor
   )
 ```
+
+    ## Note: Using an external vector in selections is ambiguous.
+    ## i Use `all_of(typeVars)` instead of `typeVars` to silence this message.
+    ## i See <https://tidyselect.r-lib.org/reference/faq-external-vector.html>.
+    ## This message is displayed once per session.
 
 # K means
 
